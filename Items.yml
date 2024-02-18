@@ -1,0 +1,7 @@
+ScrollPiece:
+  Id: Paper
+  Display: '&6Scroll Piece of the Rune Mage'
+  Lore:
+  - '&9 THEY WANNA READ MY SCROLL'
+  Options:
+    Color: 255,0,0

@@ -1,0 +1,29 @@
+Ryze___The_Rune_Mage:
+  Type: STRAY
+  Display: '&1 Rune Servant'
+  Health: 150
+  Damage: 10
+  Armor: 10
+  Options:
+    AlwaysShowName: true
+    AttackSpeed: 1
+    Despawn: false
+    FollowRange: 20
+    Invincible: false
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    Silent: true
+  Equipment:
+  - diamond_helmet HEAD
+  AITargetSelectors:
+  - players
+  - monsters
+  BossBar:
+    Enabled: true
+    Title: 'Rune Servant' 
+  Skills:
+  - skill{s=OverloadProjectile; chance=1.0} @target ~onTimer:80
+  - cast{skillname="Manaprison";duration=40;oC=ManaprisonCast;oT=ManaprisonTick;oI=ManaprisonI;onNoTargets=ManaprisonNoTargets;cancelOnMove=true;showCastBar=true;CancelOnTakeDamage=true} @target ~onTimer:200
+  - effect:particles{p=reddust;a=500;duration=80;s=0.1;hs=1;vs=2;color=#7DF9FF;CancelOnTakeDamage=true;delay=200} @origin ~onTimer:200
+  - effect:particles{p=reddust;a=500;duration=80;s=0.1;hs=1;vs=2;color=#7DF9FF;CancelOnTakeDamage=true;delay=220} @origin ~onTimer:200
+  - dropitem{i=ScrollPiece}  ~onDeath 

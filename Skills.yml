@@ -1,0 +1,23 @@
+OverloadProjectile:
+  Skills:
+    - Projectile{i=1;oT=OverloadTick;oH=OverloadHit;v=15;mr=15;tyo=0.5} @target
+OverloadTick:
+  Skills:
+    - sound{s=entity.generic.explode}
+    - effect:particles{particle=Crit_magic;a=10;s=0.1;hs=0.2;vs=0.2} @origin
+OverloadHit:
+  Skills:
+    - damage{ia=true;a=6;pkb=true}
+ManaprisonCast:
+  Skills:
+  - effect:particles{particle=Dragon_breath;duration=20;a=40;s=0.2;hs=0.4;vs=0.4} @origin
+  - prison{material=BARRIER;duration=40;breakable=false} @target
+  - effect:particles{p=reddust;a=1000;duration=80;s=0.1;hs=1;vs=2;color=#0000FF} @target
+  - effect:particles{p=reddust;a=1000;duration=80;s=0.1;hs=1;vs=2;color=#0000FF;delay=20} @target
+  - effect:particles{p=reddust;a=1000;duration=80;s=0.1;hs=1;vs=2;color=#89CFF0;delay=40} @target
+  - sound{s=entity.ender_eye.death;v=10} @target
+ManaprisonTick:
+ManaprisonI:
+  Skills:
+  - sound{s=block.fire.extinguish} @self
+ManaprisonNoTargets:
